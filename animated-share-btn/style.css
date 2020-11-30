@@ -1,0 +1,218 @@
+:root{
+  --color-red : #dd1616;
+  --color-white : #fff;
+  --color-border : rgba(209, 209, 209, 0.815);
+  --color-youtube : linear-gradient(to top left, #dd1616, #dd1616);
+  --color-twitter : linear-gradient(to top left, #1da1f2, #0a9ee2);
+  --color-insta : linear-gradient(to top left, #962fbf, #d62976);
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   -webkit-tap-highlight-color: transparent;
+}
+
+.share {
+  width: 12rem;
+  height: 4rem;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: width 0.5s 0.4s, height 0.5s;
+  box-shadow: 0 0 1rem rgba(29, 29, 29, 0.1);
+  cursor: pointer;
+}
+
+.share:hover {
+  transition: all 0.5s, width 0.5s ease-in-out, height 0.5s 0.4s ease-in-out;
+  width: 270px;
+  height: 320px;
+  border-radius: 4px;
+}
+
+.share__text {
+  font-size: 1.6em;
+  color: var(--color-red);
+  padding: 1.1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+}
+
+.share__text i {
+  margin-left: 1rem;
+}
+
+.share__list {
+  opacity: 0;
+  list-style: none;
+  padding:1rem;
+  transform: translateY(100px);
+}
+
+
+.share:hover .share__list {
+  transition: all 0.3s 1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.share__item {
+  font-size: 1em;
+  padding: 1rem;
+  background-image: linear-gradient(to top left, #111, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.share__item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.share__item a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+
+.share__item i {
+  margin-right: 6px;
+  font-size: 1.4em;
+}
+
+.share__item--youtube {
+  background-image: var(--color-youtube);
+}
+.share__item--twitter {
+  background-image: var(--color-twitter);
+}
+
+.share__item--instagram {
+  background-image: var(--color-insta);
+}
+
+
+
+
+.the-blood-coders__learn-it-btn,
+.the-blood-coders__learn-it-btn:link,
+.the-blood-coders__learn-it-btn:active,
+.the-blood-coders__learn-it-btn:visited {
+  padding: 0.5rem 2rem;
+  background-color: #eee;
+  position: absolute;
+  bottom: 2rem;
+  color: red;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.the-blood-coders__learn-it-btn:active {
+  box-shadow: 0 0 0rem rgba(0, 0, 0, 0);
+  transform: translateX(-50%) scale(0.99);
+}
+
+.the-blood-coders__btn-icon {
+  font-size: 1.6em;
+  margin-right: 0.5rem;
+}
+
+.the-blood-coders__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-blood-coders__popup {
+  width: 18rem;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.the-blood-coders__popup-header,
+.the-blood-coders__popup-header:link,
+.the-blood-coders__popup-header:visited {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: -2.6rem;
+  margin-bottom: 2rem;
+  background-image: linear-gradient(to right top, #e90606, #ff4a4a);
+  color: rgb(241, 241, 241);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+  transform: skew(-10deg) rotate(-3deg);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.the-blood-coders__code-name {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+.the-blood-coders__code-name--span {
+  background-image: linear-gradient(to right top, #e20000, #ff3131);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.the-blood-coders__link {
+  word-break: break-all;
+  line-height: 1.4;
+  display: block;
+  color: rgb(29, 29, 250);
+  margin-bottom: 1.2rem;
+}
+
+.the-blood-coders__ok-btn,
+.the-blood-coders__ok-btn:link,
+.the-blood-coders__ok-btn:active,
+.the-blood-coders__ok-btn:visited {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background-image: linear-gradient(to right top, #e20000, #ff3131);
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+  transform: skew(-10deg) rotate(-3deg);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
