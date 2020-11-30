@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 10rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform: rotateY(10deg);
+  animation: cone-animation 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.cone {
+  width: 100%;
+  height: 100%;
+  margin-top: -1rem;
+  background-color: #fbd786;
+  border-radius: 4px;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+.cone-bottom {
+  margin-top: -0.8rem;
+  width: 2.1rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fbd786;
+}
+
+.face-wrapper {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2px;
+  justify-items: center;
+  transform: translateX(0.5rem) rotateY(30deg);
+}
+
+.eyes {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 32px;
+  height: 13px;
+  background-color: #000;
+  grid-column: 1 / -1;
+  clip-path: circle(50% at 50% 0%);
+  position: relative;
+}
+
+.mouth::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 16px;
+  height: 16px;
+  background-color: #d25979;
+  border-radius: 50%;
+}
+
+.cone-top {
+  width: 100%;
+  height: 3rem;
+  margin-top: -2rem;
+  background-color: #fbd786;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  border-bottom: 4px solid #f8c35a;
+}
+
+.circle {
+  background-color: #faaa05;
+  width: 9.5rem;
+  height: 16rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: face-animation 0.5s infinite;
+}
+
+.circle-mouth {
+  border-bottom: 4px solid #000;
+  width: 30px;
+  height: 20px;
+  grid-column: 1 / -1;
+  border-radius: 100%;
+  transform: translateY(-0.8rem);
+}
+
+.bottom-shadow {
+  width: 3rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  background-color: rgba(128, 128, 129, 0.5);
+  animation: shadow-animation 0.5s infinite;
+}
+
+@keyframes shadow-animation {
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes cone-animation {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(0, -2rem) rotate(-3deg);
+  }
+
+  80% {
+    transform: translate(0, 1rem) rotate(3deg);
+  }
+}
+
+@keyframes face-animation {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(0, 1rem) scaleX(1.02);
+  }
+
+  80% {
+    transform: translate(0, 1rem) scaleX(0.99);
+  }
+}
