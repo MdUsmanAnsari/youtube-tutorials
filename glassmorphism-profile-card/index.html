@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="card__user-pic">
+            <img src="user-pic.jpeg" alt="user pic">
+        </div>
+
+        <h1 class="heading">
+            <span class="heading--sup">The Blood Coders</span>
+            <span class="heading--sub">Creative Web Dev.</span>
+        </h1>
+
+        <div class="btns">
+            <a href="#" class="btn btn--msg">Message</a>
+            <a href="#" class="btn btn--follow">Follow</a>
+        </div>
+
+        <div class="info">
+            <p>
+                <span>Following</span>
+                <span>80K</span>
+            </p>
+            <p>
+                <span>Followers</span>
+                <span>60M</span>
+            </p>
+            <p>
+                <span>Post</span>
+                <span>10K</span>
+            </p>
+        </div>
+
+    </div>
+
+     <!--  YouTube Style  -->
+     <a href="https://youtu.be/AQvjyYspJow" class="the-blood-coders__learn-it-btn" target="_blank">
+        <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>
+        Learn it
+    </a>
+
+
+    <div class="the-blood-coders__backdrop">
+        <div class="the-blood-coders__popup">
+            <a href="https://youtu.be/AQvjyYspJow" class="the-blood-coders__popup-header" target="_blank">
+                <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>TheBloodCoders
+            </a>
+
+            <h1 class="the-blood-coders__code-name">
+                <span class="the-blood-coders__code-name--span">Glassmorphism Profile Card
+            </h1>
+
+            <a href="https://youtu.be/AQvjyYspJow" class="the-blood-coders__link" target="_blank">https://youtu.be/AQvjyYspJow</a>
+            <a href="#" class="the-blood-coders__ok-btn">Ok</a>
+        </div>
+    </div>
+
+    <script>
+        const btnOk = document.querySelector('.the-blood-coders__ok-btn');
+
+        btnOk.addEventListener('click', (e) => {
+            e.target.closest('.the-blood-coders__backdrop').remove();
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+:root {
+  --color-white: #fff;
+  --color-dark: #111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 300;
+  height: 100vh;
+  background-image: url(cover.jpg);
+  background-size: cover;
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 18rem;
+  padding: 2rem 1rem;
+  padding-top: 4rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__user-pic {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-white);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card__user-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.heading--sup {
+  display: block;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+.heading--sub {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white);
+  padding: 8px 24px;
+  font-size: .9rem;
+  border: 1px solid var(--color-white);
+  border-radius: 10rem;
+}
+
+.btn--follow {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.info p {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info span {
+  display: block;
+}
+
+.info p:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.info p span:last-child {
+  font-weight: 600;
+}
+
+/* YouTube Style */
+.the-blood-coders__learn-it-btn,
+.the-blood-coders__learn-it-btn:link,
+.the-blood-coders__learn-it-btn:active,
+.the-blood-coders__learn-it-btn:visited {
+  padding: 0.5rem 2rem;
+  background-color: #ff0000;
+  position: absolute;
+  bottom: 2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.the-blood-coders__learn-it-btn:active {
+  -webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0rem rgba(0, 0, 0, 0);
+  -webkit-transform: translateX(-50%) scale(0.99);
+          transform: translateX(-50%) scale(0.99);
+}
+
+.the-blood-coders__btn-icon {
+  font-size: 1.6em;
+  margin-right: 0.5rem;
+}
+
+.the-blood-coders__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.the-blood-coders__popup {
+  width: 18rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.the-blood-coders__popup-header,
+.the-blood-coders__popup-header:link,
+.the-blood-coders__popup-header:visited {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: -2.6rem;
+  margin-bottom: 2rem;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#e90606), to(#ff4a4a));
+  background-image: linear-gradient(to right top, #e90606, #ff4a4a);
+  color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1px;
+  -webkit-transform: skew(-10deg) rotate(-3deg);
+          transform: skew(-10deg) rotate(-3deg);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.the-blood-coders__code-name {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+.the-blood-coders__code-name--span {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#faaa05), to(#fbd786));
+  background-image: linear-gradient(to right top, #faaa05, #fbd786);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.the-blood-coders__link {
+  word-break: break-all;
+  line-height: 1.4;
+  display: block;
+  color: #1d1dfa;
+  margin-bottom: 1.2rem;
+}
+
+.the-blood-coders__ok-btn,
+.the-blood-coders__ok-btn:link,
+.the-blood-coders__ok-btn:active,
+.the-blood-coders__ok-btn:visited {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#faaa05), to(#fbd786));
+  background-image: linear-gradient(to right, #faaa05, #fbd786);
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: skew(-10deg) rotate(-3deg);
+          transform: skew(-10deg) rotate(-3deg);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=style.css.map */
