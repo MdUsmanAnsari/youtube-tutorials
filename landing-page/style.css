@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+.nav{
+    padding: 1rem 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255,255,255,.7);
+    z-index: 10;
+}
+
+.nav__list{
+    display: flex;
+    list-style: none;
+}
+
+.nav__list a{
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 1px;
+    font-size: 1em;
+    margin: 0 1rem;
+}
+
+.nav__list a:hover{
+    color: #fff;
+}
+
+.nav__list i{
+    font-size: 1.2em;
+}
+
+.follow-us{
+    color: #fff;
+    margin-right: 1rem;
+}
+
+
+.hero{
+    background-image: url(Cover.jpg);
+    background-size: cover;
+    background-position: 100% 20%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40vw;
+    background-color: rgba(255,255,255,.1);
+    backdrop-filter: blur(15px);
+}
+
+.center-text{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.heading{
+    font-size: 8rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.heading__top{
+    display: block;
+    background-image: url(Cover.jpg);
+    background-size: 100vw 100vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading__bottom{
+    display: block;
+    transform: translate(80%,-4rem);
+}
+
+.bottom-text{
+    position: absolute;
+    left: 4rem;
+    bottom: 2rem;
+    width: 25rem;
+    display: flex;
+    gap: 1rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.bottom-text h1{
+    letter-spacing: 2px;
+}
+
+.bottom-text div > *{
+    margin-bottom: 1rem;
+}
+
+.bottom-text p{
+    color: rgba(255,255,255,.7);
+}
+
+.view-link{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,.6);
+}
+
+.view-link:hover{
+    color: #fff;
+}
+
+.view-link span{
+    font-size: 1.4em;
+    margin-left: .6rem;
+}
