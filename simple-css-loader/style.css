@@ -1,0 +1,55 @@
+:root{
+  --color-blue : #4834d4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+
+.loader__circle{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: loader-animation 2s infinite;
+}
+
+.loader__circle--1{
+  animation-delay: 0.1s;
+}
+
+.loader__circle--2{
+  animation-delay: 0.2s;
+}
+
+.loader__circle--3{
+  animation-delay: 0.3s;
+}
+
+.loader__circle--4{
+  animation-delay: 0.4s;
+}
+
+@keyframes loader-animation{
+
+  0%,100%{
+    opacity: 0.1;
+  }
+
+  50%{
+    transform: translateX(0.5rem);
+    opacity: 1;
+  }
+
+}
