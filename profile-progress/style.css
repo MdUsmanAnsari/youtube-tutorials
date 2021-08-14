@@ -1,0 +1,94 @@
+:root {
+  --color-purple: #5f27cd;
+  --color-bg: #f3f3f3;
+  --color-white: #fff;
+  --color-grey: #707070;
+  --color-grey-100: #e0e0e0;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--color-bg);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 25rem;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-profile__img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-profile__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.user-profile__country {
+  color: var(--color-grey);
+  font-size: 1rem;
+}
+
+.socail-profile {
+  margin-bottom: 1rem;
+}
+
+.socail-profile__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.socail-profile__name {
+  font-size: 0.8rem;
+}
+
+.socail-profile__followers {
+  font-size: 0.9rem;
+  color: var(--color-purple);
+}
+
+.progress-bar {
+  height: 6px;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: var(--color-grey-100);
+  position: relative;
+}
+
+.progress-bar__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--fill-per);
+  border-radius: inherit;
+  background-color: var(--color-purple);
+}
