@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #222;
+  --color-text: #ddd;
+  --color-text-hover: #fff;
+
+  --color-gradient-1: linear-gradient(
+    to right,
+    rgb(242, 112, 156),
+    rgb(255, 148, 114)
+  );
+
+  --color-gradient-2: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(90, 92, 106, 1) 0%,
+    rgba(32, 45, 58, 1) 81.3%
+  );
+
+  --color-gradient-3: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 209, 67, 1) 0%,
+    rgba(255, 145, 83, 1) 90%
+  );
+
+  --color-gradient-4: linear-gradient(
+    109.6deg,
+    rgba(218, 185, 252, 1) 11.2%,
+    rgba(125, 89, 252, 1) 91.1%
+  );
+
+  --color-gradient-5: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(128, 248, 174, 1) 0%,
+    rgba(223, 244, 148, 1) 90%
+  );
+
+  --color-gradient-6: radial-gradient(
+    circle 523px at 7.1% 19.3%,
+    rgba(147, 15, 255, 1) 2%,
+    rgba(5, 49, 255, 1) 100.7%
+  );
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.header {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link,
+.nav-logo,
+.btn {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-logo:hover,
+.btn:hover {
+  color: var(--color-text-hover);
+}
+
+.nav-logo {
+  text-transform: uppercase;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  color: #fff;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-image: var(--color-gradient-1);
+}
+
+.circle--2 {
+  background-image: var(--color-gradient-2);
+  width: 4rem;
+  height: 4rem;
+  left: 25%;
+  top: 35%;
+}
+
+.circle--3 {
+  background-image: var(--color-gradient-3);
+  width: 3rem;
+  height: 3rem;
+  left: 65%;
+  top: 25%;
+}
+
+.circle--4 {
+  background-image: var(--color-gradient-5);
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 60%;
+  top: 65%;
+}
+
+.circle--5 {
+  background-image: var(--color-gradient-4);
+  width: 7.5rem;
+  height: 7.5rem;
+  left: 40%;
+  top: 100%;
+}
